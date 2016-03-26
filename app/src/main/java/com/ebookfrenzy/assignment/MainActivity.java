@@ -76,13 +76,22 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, ebookfrenzy.com.Main4Activity.class)); //click leads to Profile page
             }
         });
+        Button button3 = (Button) findViewById(R.id.button3);
 
+        button3.setOnClickListener(new View.OnClickListener(){//button on click
+            @Override
+            public void onClick (View view2){
+                startActivity(new Intent(MainActivity.this, ebookfrenzy.com.Main5Activity.class)); //click leads to Time page
+            }
+        });
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        menu.add(0, Menu.FIRST, 0, "PROFILE");
         // Inflate the menu; this adds items to the action bar if it is present.
+
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
