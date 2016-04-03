@@ -32,7 +32,7 @@ public class MileTimeDBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXISTS " + MILE_TABLE_NAME);
+        db.execSQL("DROP TABLE IF EXISTS " + MILE_TABLE_NAME);//drop table if new version is detected
         onCreate(db);
     }
 }

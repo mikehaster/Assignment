@@ -64,7 +64,7 @@ public class Main5Activity extends AppCompatActivity {
         c.moveToFirst();
         int record = c.getInt(c.getColumnIndexOrThrow(MileTimeDBHelper.COL1_NAME));
         //we will parse the column data into a time format
-        String format = "00:00";
+        String format = "00:00";// minutes:seconds format
         int minutes = record / 60 + Integer.valueOf(format.substring(0,1));
         int seconds = record % 60 + Integer.valueOf(format.substring(3,4));
         String time = minutes+":"+seconds;
