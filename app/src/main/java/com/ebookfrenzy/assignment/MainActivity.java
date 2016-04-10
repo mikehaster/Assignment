@@ -18,8 +18,10 @@ import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
 
-import ebookfrenzy.com.Main2Activity;
-import ebookfrenzy.com.Main3Activity;
+import ebookfrenzy.com.ListWorkouts;
+import ebookfrenzy.com.Profile;
+import ebookfrenzy.com.RecommendedWorkout;
+import ebookfrenzy.com.Timer;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -55,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener(){//button on click
             @Override
             public void onClick (View view){
-                startActivity(new Intent(MainActivity.this, Main2Activity.class)); //click leads to All Workouts page
+                startActivity(new Intent(MainActivity.this, ListWorkouts.class)); //click leads to All Workouts page
             }
         });
 
@@ -64,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener(){//button on click
             @Override
             public void onClick (View view1){
-                startActivity(new Intent(MainActivity.this, Main3Activity.class)); //click leads to Recommended Workout page
+                startActivity(new Intent(MainActivity.this, RecommendedWorkout.class)); //click leads to Recommended Workout page
             }
         });
 
@@ -73,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener(){//button on click
             @Override
             public void onClick (View view2){
-                startActivity(new Intent(MainActivity.this, ebookfrenzy.com.Main4Activity.class)); //click leads to Profile page
+                startActivity(new Intent(MainActivity.this, Profile.class)); //click leads to Profile page
             }
         });
         Button button3 = (Button) findViewById(R.id.button3);
@@ -81,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
         button3.setOnClickListener(new View.OnClickListener(){//button on click
             @Override
             public void onClick (View view2){
-                startActivity(new Intent(MainActivity.this, ebookfrenzy.com.Main5Activity.class)); //click leads to Time page
+                startActivity(new Intent(MainActivity.this, Timer.class)); //click leads to Time page
             }
         });
     }
