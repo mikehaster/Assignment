@@ -1,26 +1,27 @@
 package ebookfrenzy.com;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
-import android.widget.EditText;
+import android.widget.Button;
 import android.widget.TextView;
 
-import com.ebookfrenzy.assignment.MainActivity;
 import com.ebookfrenzy.assignment.R;
 
 import java.util.Random;
 
-public class Main3Activity extends AppCompatActivity {
+public class RecommendedWorkout extends AppCompatActivity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main3);
+        setContentView(R.layout.activity_recoworkout);
+
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -61,11 +62,20 @@ public class Main3Activity extends AppCompatActivity {
 
 
         //setting the workout string into textView4
-        setContentView(R.layout.content_main3);
+        setContentView(R.layout.content_recoworkout);
         TextView textView = (TextView) findViewById(R.id.textView4);
         textView.setText(workout);
 
 
+        // switchButton (button7 in activity_timer) starts Timer
+        Button switchButton = (Button)findViewById(R.id.button7);
+        final Intent intentForSecondActivity =
+                new Intent(this, Timer.class);
+        switchButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(intentForSecondActivity);
+            }
+        });
     }
 
 }

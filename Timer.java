@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.os.SystemClock;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -17,17 +16,31 @@ import android.widget.Button;
 import android.widget.Chronometer;
 import android.widget.Toast;
 
-import com.ebookfrenzy.assignment.MainActivity;
 import com.ebookfrenzy.assignment.R;
 
-public class Main5Activity extends AppCompatActivity {
+public class Timer extends AppCompatActivity {
 
     private Chronometer chrono; //initialize a Chronometer
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main5);
+        setContentView(R.layout.activity_timer);
+
+        // switchButton (button6 in activity_timer) starts RecommendedWorkout
+        Button switchButton = (Button)findViewById(R.id.button6);
+        final Intent intentForSecondActivity =
+                new Intent(this, RecommendedWorkout.class);
+        switchButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(intentForSecondActivity);
+            }
+        });
+
+
+
+
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         MileTimeDBHelper MileTimeDbHelper = new MileTimeDBHelper(getApplicationContext());

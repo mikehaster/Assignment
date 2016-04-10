@@ -1,20 +1,14 @@
 package ebookfrenzy.com;
 
 import android.app.Activity;
-import android.content.ContentValues;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.ebookfrenzy.assignment.R;
 import java.util.ArrayList;
 import java.util.List;
-public class Main2Activity extends Activity {
+public class ListWorkouts extends Activity {
 
     ListView listv; //initialize list
 
@@ -22,7 +16,7 @@ public class Main2Activity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.activity_listworkouts);
 
         listv = (ListView) findViewById(R.id.listView);
 
