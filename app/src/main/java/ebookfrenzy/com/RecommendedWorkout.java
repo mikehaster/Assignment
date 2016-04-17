@@ -79,8 +79,3 @@ public class RecommendedWorkout extends AppCompatActivity {
     }
 
 }
-
-
-
-
-
