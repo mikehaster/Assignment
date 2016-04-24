@@ -87,7 +87,7 @@ public class Timer extends AppCompatActivity {
         c.close(); // close the cursor
         db.close(); //close the database
 
-      FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
